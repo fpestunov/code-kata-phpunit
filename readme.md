@@ -8,7 +8,14 @@ In this series, one kata per episode, we'll work through a wide variety of chall
 
 Before we attempt our first coding kata, let's first take a moment to setup a base directory for our exercises. We'll use Composer to pull in PHPUnit and then register PSR-4 autoloading for the project.
 
-- Добавляем папки `src` и `tests`
-- В композере прописываем ПСР-4
-- `composer dump-autoload`
+1. Инициализация проекта
 
+```sh
+mkdir name & cd name
+composer require phpunit/phpunit
+```
+
+3. Добавляем папки `src` и `test`
+4. В композере прописываем psr-4
+5. `composer dump-autoload`
+6. `vendor/bin/phpunit test`
