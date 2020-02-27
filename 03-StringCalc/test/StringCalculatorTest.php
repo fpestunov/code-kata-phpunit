@@ -28,4 +28,32 @@ class StringCalculatorTest extends TestCase
 
     $this->assertSame(19, $calculator->add('5,5,5,4'));
   }
+
+
+  /** @test */
+  function negative_numbers_are_not_allowed()
+  {
+    $calculator = new StringCalculator();
+
+    $this->expectException(\Exception::class);
+
+    $calculator->add('5,-4');
+  }
+
+
+  /** @test */
+  function numbers_greater_than_1000_are_ignored()
+  {
+    $calculator = new StringCalculator();
+
+    $this->assertEquals(5, $calculator->add('5,1001'));
+  }
+
+  /** @test */
+  // function it_accepts_a_new_line_character_as_a_delimiter_too()
+  // {
+  //   $calculator = new StringCalculator();
+
+  //   $this->assertSame(10, $calculator->add("5\n5"));
+  // }
 }
