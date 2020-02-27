@@ -19,3 +19,12 @@ composer require phpunit/phpunit
 4. В композере прописываем psr-4
 5. `composer dump-autoload`
 6. `vendor/bin/phpunit test`
+
+## 02. Fizz Buzz
+
+## 03. String Calculator Kata
+
+Next up is the string calculator kata. Our job is to create a class with a single public method that accepts a string of numbers to add. However, as part of the kata, a number of requirements must first be met, such as disallowing negative numbers and ignoring numbers greater than 1,000. Let's get started.
+
+- сделаем метод add() и тест для 0;
+- сделаем тест для 1 числа;
